@@ -27,10 +27,9 @@ while True:
         continue
 
     if "remind me" in command:
-        print("hello")
         speak("What should I remind you about")
         reminder = listen()
-        print(f"Sure, I'll remind you to {reminder} later.")
+        speak(f"Sure, I'll remind you to {reminder} later.")
         
 
     elif "create a to-do list" in command:
