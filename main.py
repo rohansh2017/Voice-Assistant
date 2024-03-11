@@ -1,9 +1,9 @@
 import speech_recognition as sr
 import pyttsx3
 
+
 r = sr.Recognizer()
-r.energy_threshold = 4000
-engine = pyttsx3.init('dummy')
+engine = pyttsx3.init()
 
 def speak(text):
     engine.say(text)
@@ -12,7 +12,7 @@ def speak(text):
 def listen():
     with sr.Microphone(1) as source:
         print("Speak now...")
-        audio = r.listen(source,timeout=10)
+        audio = r.listen(source)
     try:
         text = r.recognize_google(audio)
         return text;
