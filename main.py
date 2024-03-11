@@ -25,8 +25,11 @@ while True:
 
     if command is None:
         continue
-
-    if "remind me" in command:
+    
+    if "good morning" in command:
+        speak("Good Morning! How are you doing?")
+    
+    elif "remind me" in command:
         speak("What should I remind you about")
         reminder = listen()
         speak(f"Sure, I'll remind you to {reminder} later.")
